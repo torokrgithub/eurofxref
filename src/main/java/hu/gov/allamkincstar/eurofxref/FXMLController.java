@@ -100,8 +100,6 @@ public class FXMLController implements Initializable {
                 && !textfield1.getText().isEmpty()) {
             foreignExchangeMoney = Float.valueOf(textfield1.getText());
             foreignExchangeRates = Float.valueOf(combobox1.getValue().substring(combobox1.getValue().indexOf("-") + 1));
-            //hufMoney = Math.round(((foreignExchangeMoney / foreignExchangeRates) * hufRate) / 5) * 5f;
-            //hufMoney = Math.round(((foreignExchangeMoney / foreignExchangeRates) * hufRate) ) ;
             hufMoney = ((foreignExchangeMoney / foreignExchangeRates) * hufRate)  ;
             label2.setText(String.valueOf(hufMoney) + " Ft");
         }
@@ -110,13 +108,13 @@ public class FXMLController implements Initializable {
     public java.util.List<String> xmlLoad(File xmlFile) {
         java.util.List<String> rates = new ArrayList<>();
 
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
         try {
-            dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
-            dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(xmlFile);
+            documentBuilderFactory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+            documentBuilderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+            Document doc = documentBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
             NodeList nodeList = doc.getElementsByTagName("Cube");
