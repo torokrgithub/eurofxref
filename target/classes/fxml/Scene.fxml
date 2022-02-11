@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="233.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.gov.allamkincstar.eurofxref.FXMLController">
+    <children>
+        <Button id="buttom1" fx:id="button1" alignment="CENTER" layoutX="262.0" layoutY="20.0" onAction="#handleButton1Action" prefHeight="26.0" prefWidth="150.0" text="Árfolyam letöltés" />
+        <Label id="label1" fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="54.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="230.0" textFill="#f0360c" />
+      <ComboBox id="combobox1" fx:id="combobox1" layoutX="262.0" layoutY="86.0" prefHeight="26.0" prefWidth="150.0" />
+      <TextField id="textfield1" fx:id="textfield1" alignment="BOTTOM_RIGHT" blendMode="GREEN" layoutX="263.0" layoutY="124.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="150.0" text="0" />
+      <Button id="buttom2" fx:id="button2" alignment="CENTER" layoutX="262.0" layoutY="164.0" onAction="#handleButton2Action" prefHeight="26.0" prefWidth="150.0" text="Ft kiszámolása" />
+      <Label id="label2" fx:id="label2" alignment="CENTER_RIGHT" layoutX="264.0" layoutY="201.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="150.0" text="0 Ft" textFill="#f0060a" />
+      <Label id="label1" fx:id="label11" layoutX="14.0" layoutY="23.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="211.0" text="1. Kérje le az árfolyamokat" />
+      <Label id="label1" fx:id="label111" layoutX="14.0" layoutY="86.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="211.0" text="2. Válasszon devizát (1 EUR=)" />
+      <Label id="label1" fx:id="label1111" layoutX="14.0" layoutY="126.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="211.0" text="3. Adja meg deviza összeget" />
+      <Label id="label1" fx:id="label11111" layoutX="14.0" layoutY="165.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="211.0" text="4. Indítsa el a számolást" />
+      <Label id="label1" fx:id="label111111" layoutX="14.0" layoutY="200.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="211.0" text="5. A megadott deviza Ft-ban:" />
+    </children>
+</AnchorPane>
